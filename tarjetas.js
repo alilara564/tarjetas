@@ -1,10 +1,12 @@
 
 function crearTarjetas() {
-    //let contenedor = document.getElementById("cmpContenedor");
-    //contenedor.innerHTML = "<h1>MODIFICANDO DIV</h1>";
     let contenido = "";
     let divContenedor = document.getElementById("cmpContenedor");
-    for (let i = 1; i <= 9; i++) {
+    let desde = parseInt(document.getElementById("txtDesde").value);
+    let hasta = parseInt(document.getElementById("txtHasta").value);
+    let salto = parseInt(document.getElementById("txtSalto").value);
+
+    for (let i = desde; i <= hasta; i += salto){
         contenido += "<div class='item'>" + i + "</div>";
         console.log(contenido);
     }
